@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>v-for</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <template v-for="(item, index) in list" :key="item.id">
+                <div>{{item.text}}--{{index}}</div>
+                <span>{{item.text}}</span>
+            </template>
+        </div>
+
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {list: [{id: "010120",text: "%s"},{id: "010121",text: "are"},{id: "010122",text: "you"}]}
+            })
+        </script>
+    </body>
+</html>
